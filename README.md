@@ -64,7 +64,7 @@ You should see:
 ```
 
 ## C++
-This library appears to be actively maintained. If its good, we could write a Golang (or Python) adapter on top of it which would let us do something similar to the above without the ROS build system:
+This library appears to be actively maintained.
 
 eProsima/Fast-CDR
 
