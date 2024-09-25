@@ -1,8 +1,19 @@
-# rosette
+# Rosette
 
 As of now, this is a rough proof of concept for integrating with ROS2 from outside the ROS workspace, using native Zenoh libraries.
 
 You will separately need a ROS instance running the rmw_zenoh middleware. As of right now, this requires zenoh 0.11.
+
+## Benefits
+
+When flushed out into a full project, this would let you run your control codebase completely independently from the ROS workspace and build system.
+
+This would give a team access to ROS middleware, bagging, transforms drivers and visualization tools without having to compromise on build stack for the team's own code.
+
+Not yet done:
+* Topic discovery (not sure how to list all Zenoh or ROS topics)
+* .msg or .idl to .py generation (could adapt the code in https://github.com/rospypi/simple)
+* Not sure if Zenoh (or ROS2 for that matter) supports latched topics
 
 ## Technical Details
 
@@ -67,6 +78,6 @@ jhelovuo/cdr-encoding / https://crates.io/crates/cdr-encoding
 
 ## Golang
 
-Unfortunately, official Zenoh support for Go is outdated and broken.
+Unfortunately, official Zenoh support for Go is outdated and broken. The (https://github.com/eclipse-zenoh/zenoh-c)[zenoh-c] library could be used.
 
 For serialization and deserialization, we’d have to use a c-for-go wrapper around the Fast-CDR library linked above.
