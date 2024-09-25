@@ -1,0 +1,34 @@
+[project]
+name = "Rosette"
+version = "0.0.1"
+requires-python = ">= 3.11"
+dependencies = [
+	'pycdr2',
+	'eclipse-zenoh',
+    'mypy',
+    'ruff'
+]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = "src"
+
+[tool.mypy]
+python_version = "3.11"
+namespace_packages = true
+explicit_package_bases = true
+
+[tool.ruff]
+# Allow lines to be as long as 120.
+line-length = 120
+exclude = ["extern"]
+
+[tool.ruff.lint]
+select = ["E", "F", "N"]
+
+[tool.ruff.format]
+indent-style = "tab"
+docstring-code-format = true
