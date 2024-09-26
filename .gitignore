@@ -1,2 +1,4 @@
 build
-.egg-info
+*.egg-info
+build-zenoh
+zenoh-c
