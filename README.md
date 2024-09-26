@@ -12,7 +12,7 @@ This would give a team access to ROS middleware, bagging, transforms drivers and
 
 Not yet done:
 * Topic discovery (not sure how to list all Zenoh or ROS topics)
-* .msg or .idl to .py generation (could adapt the code in https://github.com/rospypi/simple)
+* .msg or .idl to .py generation (could adapt the code in [rospypi/simple](https://github.com/rospypi/simple))
 * Not sure if Zenoh (or ROS2 for that matter) supports latched topics
 
 ## Technical Details
@@ -66,18 +66,18 @@ You should see:
 ## C++
 This library appears to be actively maintained.
 
-eProsima/Fast-CDR
+[eProsima/Fast-CDR](https://github.com/eProsima/Fast-CDR)
 
 ## Rust
 
-Rust is supported natively in Zenoh. Crate Documentation Here.
+Rust is [supported natively in Zenoh](https://zenoh.io/docs/getting-started/installation/). See the [Crate Documentation](https://docs.rs/zenoh/latest/zenoh/).
 
 There is a Rust-native serde implementation of OMG CDR:
 
-jhelovuo/cdr-encoding / https://crates.io/crates/cdr-encoding
+[jhelovuo/cdr-encoding](https://github.com/jhelovuo/cdr-encoding) / [https://crates.io/crates/cdr-encoding](https://crates.io/crates/cdr-encoding)
 
 ## Golang
 
-Unfortunately, official Zenoh support for Go is outdated and broken. The (https://github.com/eclipse-zenoh/zenoh-c)[zenoh-c] library could be used.
+Unfortunately, official Zenoh support for Go is [outdated and broken](https://github.com/eclipse-zenoh/zenoh-go). The [zenoh-c](https://github.com/eclipse-zenoh/zenoh-c) library could be used.
 
 For serialization and deserialization, we’d have to use a c-for-go wrapper around the Fast-CDR library linked above.
