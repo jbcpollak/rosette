@@ -1,0 +1,9 @@
+[package]
+name = "Rosette-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "0.3.30"
+tokio = "1.40.0"
+zenoh = "0.11.0"
